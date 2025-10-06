@@ -17,7 +17,7 @@ print(f"Reading pullup on GPIO {LINEFAIL_PIN}...")
 print("Press Ctrl+C to exit.")
 
 GPIO.add_event_detect(
-    LINEFAIL_PIN, GPIO.FALLING, callback=[linefail_callback], bouncetime=200
+    LINEFAIL_PIN, GPIO.FALLING, callback=linefail_callback, bouncetime=200
 )
 
 print("Monitoring UPS line fail on pin 37 (GPIO26). Press Ctrl+C to exit.")
